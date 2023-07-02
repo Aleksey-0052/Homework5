@@ -10,9 +10,11 @@ public class Main {
         System.out.println("Задача 1");
 
         int clientOs = 0;
-        if (clientOs == 0) {
+        int iOs = 0;
+        int Android = 1;
+        if (clientOs == iOs) {
             System.out.println("Установите версию приложения для iOS по ссылке");
-        } else if (clientOs == 1) {
+        } else if (clientOs == Android) {
             System.out.println("Установите версию приложения для Android по ссылке");
         } else {
             System.out.println("Некорректные данные");
@@ -21,15 +23,18 @@ public class Main {
     public static void task2() {
         System.out.println("Задача 2");
 
-        int clientOs = 1;
-        int clientDeviceYear = 2013;
-        if (clientOs == 0 && clientDeviceYear >= 2015) {
+        int clientOs = 0;
+        int clientDeviceYear = 2019;
+        int iOs = 0;
+        int Android = 1;
+        int checkYear = 2015;
+        if (clientOs == iOs && clientDeviceYear >= checkYear) {
             System.out.println("Установите версию приложения для iOS по ссылке");
-        } else if (clientOs == 0 && clientDeviceYear < 2015) {
+        } else if (clientOs == iOs && clientDeviceYear < checkYear) {
             System.out.println("Установите облегченную версию для IOS по ссылке");
-        } else if (clientOs == 1 && clientDeviceYear >= 2015) {
+        } else if (clientOs == Android && clientDeviceYear >= checkYear) {
             System.out.println("Установите версию приложения для Android по ссылке");
-        } else if (clientOs == 1 && clientDeviceYear < 2015) {
+        } else if (clientOs == Android && clientDeviceYear < checkYear) {
             System.out.println("Установите облегченную версию для Android по ссылке");
         } else {
             System.out.println("Некорректные данные");
@@ -70,6 +75,7 @@ public class Main {
         switch (monthNumber) {
             case 1:
             case 2:
+            case 12:
                 System.out.println("Зимний месяц");
                 break;
             case 3:
@@ -86,9 +92,6 @@ public class Main {
             case 10:
             case 11:
                 System.out.println("Осенний месяц");
-                break;
-            case 12:
-                System.out.println("Зимний месяц");
                 break;
             default:
                 System.out.println("Такого месяца не существует");
